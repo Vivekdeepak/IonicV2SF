@@ -1,0 +1,75 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Contact</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="saveContact($event)">
+        <ion-icon name="ios-cloud-upload"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>First Name</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.FirstName" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Last Name</ion-label>
+    <ion-input type="text"   [(ngModel)]="contact.LastName"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.Email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.Title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Phone</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.Phone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Account Name</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.Account.Name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mailing Street</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.MailingStreet"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mailing City</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.MailingCity"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mailing State</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.MailingState"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mailing Country</ion-label>
+    <ion-input type="text"  [(ngModel)]="contact.MailingCountry"></ion-input>
+  </ion-item>
+    
+
+</ion-list>
+  
+</ion-content>

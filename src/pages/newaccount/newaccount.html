@@ -1,0 +1,77 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>New Account</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="saveAccount($event)">
+        <ion-icon name="ios-cloud-upload"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text"  [(ngModel)]="account.Name" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Type</ion-label>
+    <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="account.Type">
+      <ion-option *ngFor="let item of typeV">{{item}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Rating</ion-label>
+    <ion-select  okText="Okay" cancelText="Dismiss" [(ngModel)]="account.Rating">
+      <ion-option *ngFor="let item of ratingV">{{item}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Industry</ion-label>
+    <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="account.Industry">
+      
+      <ion-option *ngFor="let item of industry">{{item}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea   [(ngModel)]="account.Description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Billing Street</ion-label>
+    <ion-textarea  [(ngModel)]="account.BillingStreet"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Billing City</ion-label>
+    <ion-input type="text"  [(ngModel)]="account.BillingCity"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Billing State</ion-label>
+    <ion-input type="text"  [(ngModel)]="account.BillingState"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Billing Country</ion-label>
+    <ion-input type="text"  [(ngModel)]="account.BillingCountry"></ion-input>
+  </ion-item>
+    
+
+</ion-list>
+  
+</ion-content>

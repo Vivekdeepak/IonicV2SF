@@ -1,0 +1,63 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{account.Name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item>
+    <h3>Type</h3>
+    <ion-note item-right>{{account.Type}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Rating</h3>
+    <ion-note item-right>{{account.Rating}}</ion-note>
+  </ion-item>
+
+
+  <ion-item>
+    <h3>Annual Revenue</h3>
+    <ion-note item-right>{{account.AnnualRevenue}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Industry</h3>
+    <ion-note item-right>{{account.Industry}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Number of Employees</h3>
+    <ion-note item-right>{{account.NumberOfEmployees}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Billing Street</h3>
+    <ion-note item-right>{{account.BillingStreet}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Billing City</h3>
+    <ion-note item-right>{{account.BillingCity}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Billing State</h3>
+    <ion-note item-right>{{account.BillingState}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <h3>Billing Country</h3>
+    <ion-note item-right>{{account.BillingCountry}}</ion-note>
+  </ion-item>
+    
+
+</ion-list>
+  
+</ion-content>

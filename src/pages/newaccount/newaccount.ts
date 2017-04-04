@@ -53,8 +53,7 @@ export class NewAccount {
   		  this.navCtrl.popToRoot();
 
      }).catch(error => console.log("ERROR" + JSON.stringify(error)));
-
-    
+  
   }
 
 

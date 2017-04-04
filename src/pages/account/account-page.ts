@@ -28,7 +28,7 @@ export class Accountlist {
     		      content: 'Please wait...getting Accounts',
     		      dismissOnPageChange: true
     		    }).present();	
-               console.log("SEARCHING"); 
+                
                this.service.giveAllAccount().then(data => {
                		this.accountsList = data;
                   this.dataService.setAccountList(data);

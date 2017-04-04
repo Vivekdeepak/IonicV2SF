@@ -36,8 +36,7 @@ export class SfdcService {
     }
 
     updateContact(contact){
-        //console.log("DATA" + JSON.stringify(contact))
-        
+        // Removing account information before passing the JSON to the request
         
         let tempContact = contact;
         delete tempContact.Account;

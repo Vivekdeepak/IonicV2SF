@@ -12,8 +12,7 @@ import { ContactDetail } from '../contactdetail/contactdetail';
   templateUrl: 'page2.html'
 })
 export class Page2 {
-  //selectedItem: any;
-  icons: string[];
+  
   contactList: Array<any>;
   loading : any;
   contactRec: any;
@@ -24,19 +23,19 @@ export class Page2 {
   }
 
   getAllContact() {
-           this.contactList = this.dataService.getContactData();
-           if(this.contactList == undefined || this.contactList.length == 0){
-               this.loading = this.loadingCtrl.create({
-                  content: 'Please wait...getting contacts',
-                  dismissOnPageChange: true
-               }).present();
+     this.contactList = this.dataService.getContactData();
+     if(this.contactList == undefined || this.contactList.length == 0){
+             this.loading = this.loadingCtrl.create({
+                content: 'Please wait...getting contacts',
+                dismissOnPageChange: true
+             }).present();
 
-               this.service.getAllContact().then(data => {
-                this.contactList = data;
-                this.dataService.setContactList(data);
-                this.loading.dismiss();
-               }).catch(error => console.log("ERROR" + JSON.stringify(error)));
-           }
+             this.service.getAllContact().then(data => {
+                  this.contactList = data;
+                  this.dataService.setContactList(data);
+                  this.loading.dismiss();
+             }).catch(error => console.log("ERROR" + JSON.stringify(error)));
+     }
   }
 
   itemTapped(event, contact) {

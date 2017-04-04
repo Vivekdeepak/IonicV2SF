@@ -33,12 +33,11 @@ export class MyApp {
   }
 
   initializeApp() {
-    // Adding Salesforce Code
+    // Adding Salesforce Authentication Code
     let oauth = OAuth.createInstance();
       oauth.login()
       .then(oauthResult => {
           DataService.createInstance(oauthResult);
-          //console.log("VIVEK" + JSON.stringify(oauthResult))
       });  
 
     this.platform.ready().then(() => {

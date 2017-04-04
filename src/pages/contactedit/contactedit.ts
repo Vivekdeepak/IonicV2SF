@@ -11,8 +11,6 @@ export class ContactEdit {
   
   contact : any;
   loading : any;
-  callType : any;
-	
 
 
   constructor(public alertCtrl: AlertController,public navCtrl: NavController,public service: SfdcService,public navParams: NavParams,public loadingCtrl: LoadingController) {
@@ -29,7 +27,7 @@ export class ContactEdit {
   		    title: 'Success',subTitle: 'Contact Updated',buttons: ['Dismiss']
   		  });
   		  alert.present();
-        // Navigate to list view
+        // Navigate to list view of contact
   		  this.navCtrl.popToRoot();
 
      }).catch(error => console.log("ERROR" + JSON.stringify(error)));
